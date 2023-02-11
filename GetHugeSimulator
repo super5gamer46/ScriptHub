@@ -1,0 +1,20 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("TITLE", "Ocean")
+
+
+--MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("MainSection")
+
+
+MainSection:NewToggle("SuperClick", "Clicks Fast", function(state)
+    if state then
+        local ohInstance1 = workspace.BreakableObjects.Office.Cranes.Crane
+local ohString2 = "1676141816.7555"
+local ohVector33 = Vector3.new(-1054.6444091796875, 94.74054718017578, 110.63397216796875)
+
+game:GetService("ReplicatedStorage").ServerClientPathway.Smashing.Events.SmashSuccessful:FireServer(ohInstance1, ohString2, ohVector33)
+    else
+        print("Toggle Off")
+    end
+end)
