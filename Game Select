@@ -1,8 +1,8 @@
 --2 games
 if game.PlaceId == 4032944086 then
     -- MAIN
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/super5gamer46/ScriptHub/main2/GetHugeSimulator1'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/super5gamer46/ScriptHub/main/GetHugeSimulator1'))()
 elseif game.PlaceId == 9498006165 then
     -- MAIN
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/super5gamer46/ScriptHub/main1/Tapping%20Simulator'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/super5gamer46/ScriptHub/main/Tapping%20Simulator'))()
 end
