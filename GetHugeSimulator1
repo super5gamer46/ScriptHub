@@ -11,6 +11,7 @@ MainSection:NewButton("Sell", "Sells Strength", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(177.008804, 226.118805, 127.903709, -0.511973023, 9.76819123e-08, -0.859001517, 4.8180901e-08, 1, 8.49993782e-08, 0.859001517, 2.12992179e-09, -0.511973023)
     game:GetService("ReplicatedStorage").Remotes.SellStrengthRequest:FireServer()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(e)
+    print(e)
 end)
 
 MainSection:NewButton("Shop", "Shop tp", function()
