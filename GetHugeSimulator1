@@ -16,6 +16,22 @@ end)
 MainSection:NewButton("Gems tp", "teleports you under the mountain for gems", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-253.119476, 175.921875, 172.250565, -0.389150888, 9.45430401e-08, 0.921174049, 3.87639609e-08, 1, -8.62573231e-08, -0.921174049, 2.14124118e-09, -0.389150888)
 end)
+MainSection:NewToggle("Auto kill", "Kills nearby players", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        local ohString1 = "Punch"
+        local ohNumber2 = 2
+        game:GetService("ReplicatedStorage").Remotes.PVP.AttackAttempt:FireServer(ohString1, ohNumber2)
+        local String1 = "Stomp"
+        game:GetService("ReplicatedStorage").Remotes.PVP.AttackAttempt:FireServer(String1)
+        end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        end
+    end
+end)
 MainSection:NewToggle("Lift Weight", "LIFT", function(state)
     if state then
         _G.loop = true
