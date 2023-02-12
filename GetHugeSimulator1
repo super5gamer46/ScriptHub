@@ -13,6 +13,9 @@ end)
 MainSection:NewButton("Shop", "Shop tp", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(13.850358, 171.91951, 168.619476, -0.918642819, -5.98459948e-08, 0.39508906, -3.29572103e-08, 1, 7.48441167e-08, -0.39508906, 5.57339774e-08, -0.918642819)
 end)
+MainSection:NewButton("Gems tp", "teleports you under the mountain for gems", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-253.119476, 175.921875, 172.250565, -0.389150888, 9.45430401e-08, 0.921174049, 3.87639609e-08, 1, -8.62573231e-08, -0.921174049, 2.14124118e-09, -0.389150888)
+end)
 MainSection:NewToggle("Lift Weight", "LIFT", function(state)
     if state then
         _G.loop = true
