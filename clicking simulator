@@ -18,6 +18,19 @@ MainSection:NewToggle("Auto Click", "Clicks automatically", function(state)
         end
     end
 end)
+MainSection:NewToggle("Auto Rebirth", "Rebirths automatically", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        ohInstance1 = game:GetService("Players").LocalPlayer
+	game:GetService("ReplicatedStorage").Packages.Knit.Services.RebirthService.RF.RequestRebirth:InvokeServer(ohInstance1)
+        end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        end
+    end
+end)
 MainSection:NewKeybind("Toggle", "Toggles UI Press F", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
