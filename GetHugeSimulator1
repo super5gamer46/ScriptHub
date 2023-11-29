@@ -58,3 +58,23 @@ MainSection:NewToggle("Buy All Weights", "Loop Buy all", function(state)
         end
     end
 end)
+MainSection:NewToggle("Auto Farm", "Auto Farms", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
+        local ohString10 = "Weight"
+        local ohString20 = "Islands"
+        game:GetService("ReplicatedStorage").Remotes.Shop.RequestBuyAll:InvokeServer(ohString10, ohString20)
+        local ohNumber1 = 500
+        local ohString2 = "DNA"
+        local ohString3 = "Islands"
+        game:GetService("ReplicatedStorage").Remotes.Shop.RequestPurchase:InvokeServer(ohNumber1, ohString2, ohString3)
+        game:GetService("ReplicatedStorage").Remotes.SellStrengthRequest:FireServer()
+        end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        end
+    end
+end)
