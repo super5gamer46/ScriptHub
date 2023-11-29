@@ -1,1 +1,21 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Clicking Simulator", "Ocean")
+--https://xheptcofficial.gitbook.io/kavo-library/
+
+--MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("MainSection")
+local ohString1 = "Main"
+MainSection:NewToggle("Auto Click", "Clicks automatically", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
+        end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        end
+    end
+end)
 
