@@ -43,7 +43,7 @@ MainSection:NewToggle("Buy Jumps", "", function(state)
         end
     end
 end)
-MainSection:NewDropdown("Buy Egg", "Name", {"Basic Egg", "Farm Egg", "Fantasy Egg"}, function(currentOption)
+MainSection:NewDropdown("Buy Egg", "Name", {"Basic Egg", "Farm Egg", "Fantasy Egg", "Frosted Egg"}, function(currentOption)
 
 	local ohString1 = currentOption
 	local ohString2 = "Single"
