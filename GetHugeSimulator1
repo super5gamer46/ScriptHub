@@ -44,3 +44,15 @@ MainSection:NewToggle("Lift Weight", "LIFT", function(state)
         end
     end
 end)
+MainSection:NewToggle("Buy All Weights", "Loop Buy all", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        game:GetService("ReplicatedStorage").Remotes.Shop.RequestBuyAll:FireServer()
+        end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        end
+    end
+end)
