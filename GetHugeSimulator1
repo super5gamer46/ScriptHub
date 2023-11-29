@@ -48,7 +48,9 @@ MainSection:NewToggle("Buy All Weights", "Loop Buy all", function(state)
     if state then
         _G.loop = true
         while _G.loop == true do wait()
-        game:GetService("ReplicatedStorage").Remotes.Shop.RequestBuyAll:FireServer()
+        local ohString1 = "Weight"
+        local ohString2 = "Islands"
+        game:GetService("ReplicatedStorage").Remotes.Shop.RequestBuyAll:InvokeServer(ohString1, ohString2)
         end
     else
         _G.loop = false
