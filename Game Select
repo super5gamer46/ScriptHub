@@ -5,4 +5,7 @@ if game.PlaceId == 4032944086 then
 elseif game.PlaceId == 9498006165 then
     -- MAIN
     loadstring(game:HttpGet('https://raw.githubusercontent.com/super5gamer46/ScriptHub/main2/Tapping%20Simulator'))()
+elseif game.PlaceId == 14400545236 then
+    -- MAIN
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/super5gamer46/ScriptHub/main2/clicking%20simulator'))()
 end
