@@ -66,10 +66,9 @@ MainSection:NewToggle("Auto Farm", "Auto Farms", function(state)
         local ohString10 = "Weight"
         local ohString20 = "Islands"
         game:GetService("ReplicatedStorage").Remotes.Shop.RequestBuyAll:InvokeServer(ohString10, ohString20)
-        local ohNumber1 = 500
         local ohString2 = "DNA"
         local ohString3 = "Islands"
-        game:GetService("ReplicatedStorage").Remotes.Shop.RequestPurchase:InvokeServer(ohNumber1, ohString2, ohString3)
+        game:GetService("ReplicatedStorage").Remotes.Shop.RequestPurchase:InvokeServer(ohString2, ohString3)
         game:GetService("ReplicatedStorage").Remotes.SellStrengthRequest:FireServer()
         end
     else
