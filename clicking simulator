@@ -6,6 +6,9 @@ local Window = Library.CreateLib("Clicking Simulator", "Ocean")
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("MainSection")
 local ohString1 = "Main"
+Section:NewKeybind("Toggle", "Toggles UI Press F", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
 MainSection:NewToggle("Auto Click", "Clicks automatically", function(state)
     if state then
         _G.loop = true
