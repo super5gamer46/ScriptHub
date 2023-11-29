@@ -31,7 +31,28 @@ MainSection:NewToggle("Auto Rebirth", "Rebirths automatically", function(state)
         end
     end
 end)
+MainSection:NewToggle("Buy Jumps", "", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        game:GetService("ReplicatedStorage").Packages.Knit.Services.JumpService.RF.RequestJumpPurchase:InvokeServer()
+        end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        end
+    end
+end)
+MainSection:NewDropdown("Buy Egg", "Name", {"Basic Egg", "Farm Egg", "Fantasy Egg"}, function(currentOption)
+
+	local ohString1 = currentOption
+	local ohString2 = "Single"
+	
+	game:GetService("ReplicatedStorage").Packages.Knit.Services.EggService.RF.OpenEgg:InvokeServer(ohString1, ohString2)
+end)
+
 MainSection:NewKeybind("Toggle", "Toggles UI Press F", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
+
 
