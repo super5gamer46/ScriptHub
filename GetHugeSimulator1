@@ -81,3 +81,6 @@ MainSection:NewToggle("Auto Farm", "Auto Farms", function(state)
         end
     end
 end)
+MainSection:NewKeybind("Toggle", "Toggles UI Press F", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
