@@ -1,0 +1,21 @@
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Prison life", "Ocean")
+--https://xheptcofficial.gitbook.io/kavo-library/
+
+--MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("MainSection")
+local ohString1 = "Main"
+MainSection:NewButton("Gets Guns", "Collects all guns", function()
+    SavedCframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(822.098694, 99.0000153, 2251.29614, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+    local ohInstance1 = workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP
+    workspace.Remote.ItemHandler:InvokeServer(ohInstance1)
+    local ohInstance1 = workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP
+    workspace.Remote.ItemHandler:InvokeServer(ohInstance1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-943.40033, 91.2287827, 2056.72583, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+    local ohInstance1 = workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP
+    workspace.Remote.ItemHandler:InvokeServer(ohInstance1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(SavedCframe)
+end)
