@@ -16,6 +16,9 @@ end)
 MainSection:NewButton("Gems tp", "teleports you under the mountain for gems", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-253.119476, 175.921875, 172.250565, -0.389150888, 9.45430401e-08, 0.921174049, 3.87639609e-08, 1, -8.62573231e-08, -0.921174049, 2.14124118e-09, -0.389150888)
 end)
+MainSection:NewButton("Sell tp", "teleports you under the mountain for gems", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(137.326492, 197.085892, 156.253311, 0.974677861, -0.000655408017, -0.223612696, 0.000888520386, 0.999999166, 0.000941868348, 0.223611891, -0.00111670268, 0.974677622)
+end)
 MainSection:NewToggle("Auto kill", "Kills nearby players", function(state)
     if state then
         _G.loop = true
@@ -67,6 +70,10 @@ MainSection:NewToggle("Auto Farm", "Auto Farms", function(state)
         local ohString20 = "Islands"
         game:GetService("ReplicatedStorage").Remotes.Shop.RequestBuyAll:InvokeServer(ohString10, ohString20)
         game:GetService("ReplicatedStorage").Remotes.SellStrengthRequest:FireServer()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(137.326492, 197.085892, 156.253311, 0.974677861, -0.000655408017, -0.223612696, 0.000888520386, 0.999999166, 0.000941868348, 0.223611891, -0.00111670268, 0.974677622)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-259.472168, 290.056671, 171.950073, 0.866007268, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, 0.866007268)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(842.421997, 203.162384, 808.963867, 0.820390582, -0.0109418053, 0.571698844, -0.00287162559, 0.999725461, 0.0232546497, -0.571796358, -0.0207196008, 0.820133924)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(137.326492, 197.085892, 156.253311, 0.974677861, -0.000655408017, -0.223612696, 0.000888520386, 0.999999166, 0.000941868348, 0.223611891, -0.00111670268, 0.974677622)
         end
     else
         _G.loop = false
