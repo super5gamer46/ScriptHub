@@ -19,3 +19,8 @@ MainSection:NewToggle("Auto Click", "It Willith clickith", function(state)
         end
     end
 end)
+MainSection:NewButton("Shop", "Opens Shop GUI", function()
+    local ohString1 = "resetMenus"
+    local ohInstance2 = game:GetService("Players").LocalPlayer.PlayerGui.itemsShopGui.itemsShopMenu
+    game:GetService("Players").LocalPlayer.PlayerGui.gameGui.guiEffectsEvent:Fire(ohString1, ohInstance2)
+end)
