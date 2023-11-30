@@ -11,11 +11,15 @@ MainSection:NewButton("Gets Guns", "Collects all guns", function()
     SavedCframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(822.098694, 99.0000153, 2251.29614, -1, 0, 0, 0, 1, 0, 0, 0, -1)
     local ohInstance1 = workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP
+    local ohInstance2 = workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP
+    local ohInstance3 = workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP
     workspace.Remote.ItemHandler:InvokeServer(ohInstance1)
-    local ohInstance1 = workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP
-    workspace.Remote.ItemHandler:InvokeServer(ohInstance1)
+    
+    task.wait(1)
+    workspace.Remote.ItemHandler:InvokeServer(ohInstance2)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-943.40033, 91.2287827, 2056.72583, -1, 0, 0, 0, 1, 0, 0, 0, -1)
-    local ohInstance1 = workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP
-    workspace.Remote.ItemHandler:InvokeServer(ohInstance1)
+    
+    workspace.Remote.ItemHandler:InvokeServer(ohInstance3)
+    task.wait(1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(SavedCframe)
 end)
