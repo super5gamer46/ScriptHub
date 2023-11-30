@@ -1,1 +1,21 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Ninja Legends Two", "Ocean")
+--https://xheptcofficial.gitbook.io/kavo-library/
 
+--MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("MainSection")
+local ohString1 = "Main"
+MainSection:NewToggle("Auto Click", "It Willith clickith", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        local ohString1 = "swingBlade"
+        game:GetService("Players").LocalPlayer.saberEvent:FireServer(ohString1)
+        end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        end
+    end
+end)
